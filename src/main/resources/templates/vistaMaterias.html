@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign-in</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<h1>Ingresar Materia</h1>
+
+	<form th:action="@{/materias/registrar}" th:object="${materia}" th:method="POST">
+
+		<table class="table">
+			<thead>
+
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row"></th>
+					<td> Nombre:
+					</td>
+					<td><input th:field="${materia.nombre}"></td>
+
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td> Codigo:
+					</td>
+					<td> <input th:field="${materia.codigo}"></td>
+
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td> Numero de creditos:
+					</td>
+					<td><input th:field="${materia.numCreditos}"></td>
+
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td> Cedula Profesor:
+					</td>
+					<td><input th:field="${materia.cedulaProfesor}"></td>
+
+				</tr>
+
+
+				<tr>
+					<th scope="row"></th>
+					<td><input type="submit" value="Registrar"></td>
+				</tr>
+
+
+			</tbody>
+		</table>
+
+
+	</form>
+
+
+</body>
+
+</html>

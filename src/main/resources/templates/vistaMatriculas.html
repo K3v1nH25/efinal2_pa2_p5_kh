@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign-in</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<h1>Generar Matricula</h1>
+
+	<form th:action="@{/matriculas/matricular}" th:object="${matriculaDTO}" th:method="POST">
+
+		<table class="table">
+			<thead>
+
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row"></th>
+					<td> Cedula:
+					</td>
+					<td><input th:field="${matriculaDTO.cedulaEstudiante}"></td>
+
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td> Codigo 1:
+					</td>
+					<td> <input th:field="${matriculaDTO.codigoMateriaUno}"></td>
+
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td> Codigo 2:
+					</td>
+					<td><input th:field="${matriculaDTO.codigoMateriaDos}"></td>
+
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td> Codigo 3:
+					</td>
+					<td><input th:field="${matriculaDTO.codigoMateriaTres}"></td>
+
+				</tr>
+
+				<tr>
+					<th scope="row"></th>
+					<td> Codigo 4:
+					</td>
+					<td><input th:field="${matriculaDTO.codigoMateriaCuatro}"></td>
+
+				</tr>
+
+
+				<tr>
+					<th scope="row"></th>
+					<td><input type="submit" value="Registrar"></td>
+				</tr>
+
+
+			</tbody>
+		</table>
+
+
+	</form>
+
+
+</body>
+
+</html>
